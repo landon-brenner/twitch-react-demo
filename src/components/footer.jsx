@@ -6,7 +6,7 @@ const Footer = (props) => {
 		<footer className="bg-light font-small pt-4 mt-4">
 			<div className='footer-copyright text-center py-1'>
 				&copy; {(new Date().getFullYear())} <a href="https://www.linkedin.com/in/landonbrenner/">Landon Brenner</a>
-				<p>Find source on GitHub</p>
+				<p>Find source on <a href='https://github.com/landon-brenner/twitch-react-demo/'>GitHub</a></p>
 			</div>
 			<div className='footer-copyright text-center py-1'>
 				<a href='https://reactjs.org/'>

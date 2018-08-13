@@ -3,18 +3,26 @@ import React from 'react'
 const Footer = (props) => {
 
 	return (
-		<footer className="bg-light font-small pt-4 mt-4">
-			<div className='footer-copyright text-center py-1'>
+		<footer className="bg-light font-small pt-1 mt-1">
+			<div className='text-center pt-3'>
 				&copy; {(new Date().getFullYear())} <a href="https://www.linkedin.com/in/landonbrenner/">Landon Brenner</a>
 				<p>Find source on <a href='https://github.com/landon-brenner/twitch-react-demo/'>GitHub</a></p>
 			</div>
-			<div className='footer-copyright text-center py-1'>
+			<div className='text-center'>
 				<a href='https://reactjs.org/'>
 					<img
 					 src={props.logo}
-					 className="App-logo"
-					 alt="logo"
+					 className='App-logo'
+					 alt='logo'
 					 title='Made with ReactJS' />
+				</a>
+				<a href='https://www.twitch.tv'>
+					<img
+						height='40'
+						alt=''
+						src={props.Twitch_Purple}
+						title='Visit Twitch.tv'
+					/>
 				</a>
 			</div>
 		</footer>

@@ -38,8 +38,8 @@ class App extends Component {
           games: data.games
         })    
       })
-      .catch(({ error }) => {
-        console.log('Error during search: ' + error)
+      .catch(( error ) => {
+        console.log('Error during search - ' + error)
       })
     } else {
       this.getTopGames()
@@ -55,12 +55,12 @@ class App extends Component {
         games: data.top.map(g => g.game)
       })
     })
-    .catch(({ error }) => {
-      console.log('Error getting top games: ' + error)
+    .catch(( error ) => {
+      console.log('Error getting top games - ' + error)
     })
   }
 
-  handleInputChange = (event) => {
+  handleInputChange = ( event ) => {
     this.setState({
       query: event.target.value
     })
@@ -74,7 +74,6 @@ class App extends Component {
           getTopGames={this.getTopGames}
           handleInputChange={this.handleInputChange}
           handleSearchClick={this.getSearch}
-          Twitch_Purple={Twitch_Purple}
         />
         <main className='container'>
           <Games
@@ -83,6 +82,7 @@ class App extends Component {
         </main>
         <Footer
           logo={logo}
+          Twitch_Purple={Twitch_Purple}
         />
       </div>
     );

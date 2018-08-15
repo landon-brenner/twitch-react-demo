@@ -36,7 +36,7 @@ class App extends Component {
       .then(({ data }) => {
         this.setState({
           games: data.games
-        })    
+        })
       })
       .catch(( error ) => {
         console.log('Error during search - ' + error)

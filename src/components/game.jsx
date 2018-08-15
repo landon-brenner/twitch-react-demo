@@ -2,15 +2,15 @@
 
 import React from 'react';
 
-const Game = (props) => {
+const Game = ({game}) => {
 
 	return (
 		<div className='game-cards'>
 			<img
 				className='game-box'
-				src={props.game.box.medium}
-				title={props.game.localized_name}
-				alt={props.game.name}
+				src={game.box.medium}
+				title={game.localized_name}
+				alt={game.name}
 			/>
 		</div>
 	);

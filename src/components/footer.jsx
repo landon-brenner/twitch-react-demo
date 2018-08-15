@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Footer = (props) => {
+const Footer = ({logo, Twitch_Purple}) => {
 
 	return (
 		<footer className="bg-light font-small pt-1 mt-1">
@@ -11,7 +11,7 @@ const Footer = (props) => {
 			<div className='text-center'>
 				<a href='https://reactjs.org/'>
 					<img
-					 src={props.logo}
+					 src={logo}
 					 className='App-logo'
 					 alt='logo'
 					 title='Made with ReactJS' />
@@ -20,7 +20,7 @@ const Footer = (props) => {
 					<img
 						height='40'
 						alt=''
-						src={props.Twitch_Purple}
+						src={Twitch_Purple}
 						title='Visit Twitch.tv'
 					/>
 				</a>

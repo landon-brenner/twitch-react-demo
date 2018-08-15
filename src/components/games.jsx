@@ -1,11 +1,11 @@
 import React from 'react';
 import Game from './game';
 
-const Games = (props) => {
+const Games = ({games}) => {
 
 	return (
 		<div className='game-cards'>
-			{ props.games.map(game => (
+			{ games.map(game => (
 				<Game
 					key={game._id}
 					game={game}
@@ -16,4 +16,3 @@ const Games = (props) => {
 }
 
 export default Games
-

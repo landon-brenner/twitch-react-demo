@@ -48,7 +48,7 @@ class App extends Component {
             games: data.games
           })
         } else {
-          /* TODO: Implement alert: Search returned no results */
+          alert('No results...showing top 10 games')
           this.getTopGames()
         }
       })

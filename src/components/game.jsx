@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-const Game = ({game}) => {
+const Game = ({game, showGameModal}) => {
 
 	return (
 		<div className='game-cards'>
@@ -11,6 +11,7 @@ const Game = ({game}) => {
 				src={game.box.medium}
 				title={game.localized_name}
 				alt={game.name}
+				onClick={() => showGameModal(game._id)}
 			/>
 		</div>
 	);

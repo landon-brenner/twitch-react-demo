@@ -4,6 +4,7 @@ const Search = ({
 	input,
 	getTopGames,
 	handleInputChange,
+	handleKeyPress,
 	handleSearchClick
 }) => {
 
@@ -15,6 +16,7 @@ const Search = ({
 					placeholder='Search popular games on Twitch!'
 					value={input}
 					onChange={handleInputChange}
+					onKeyPress={handleKeyPress}
 				/>
 				<div className='input-group-append'>
 					<button

@@ -1,7 +1,7 @@
 import React from 'react';
 import Game from './game';
 
-const Games = ({games}) => {
+const Games = ({games, showGameModal}) => {
 
 	return (
 		<div className='game-cards'>
@@ -9,6 +9,7 @@ const Games = ({games}) => {
 				<Game
 					key={game._id}
 					game={game}
+					showGameModal={showGameModal}
 				/>
 			))}
 		</div>

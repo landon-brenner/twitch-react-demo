@@ -5,8 +5,8 @@ const Footer = ({logo, Twitch_Purple}) => {
 	return (
 		<footer className="bg-light font-small pt-1 mt-1">
 			<div className='text-center pt-3'>
-				&copy; {(new Date().getFullYear())} <a href="https://www.linkedin.com/in/landonbrenner/">Landon Brenner</a>
-				<p>Find source on <a href='https://github.com/landon-brenner/twitch-react-demo/'>GitHub</a></p>
+				&copy; {(new Date().getFullYear())} <a href="https://www.linkedin.com/in/landonbrenner/">Landon Brenner</a><br/>
+				Find source on <a href='https://github.com/landon-brenner/twitch-react-demo/'>GitHub</a>
 			</div>
 			<div className='text-center'>
 				<a href='https://reactjs.org/'>
@@ -14,11 +14,12 @@ const Footer = ({logo, Twitch_Purple}) => {
 					 src={logo}
 					 className='App-logo'
 					 alt='logo'
-					 title='Made with ReactJS' />
+					 title='Made with ReactJS'
+				/>
 				</a>
 				<a href='https://www.twitch.tv'>
 					<img
-						height='40'
+						height='50px'
 						alt=''
 						src={Twitch_Purple}
 						title='Visit Twitch.tv'

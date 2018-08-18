@@ -3,10 +3,9 @@ import axios from 'axios'
 import Search from './components/search.jsx';
 import Games from './components/games.jsx';
 import Footer from './components/footer.jsx';
-import GameModal from './components/gamemodal.jsx'
 import './App.css';
-import logo from './logo.svg';
-import Twitch_Purple from './Twitch_Purple_RGB.png'
+import logo from './assets/logo.svg';
+import Twitch_Purple from './assets/Twitch_Purple_RGB.svg'
 
 // API key in <project>/.env
 const API_KEY = process.env.REACT_APP_TWITCH_API_KEY
@@ -24,10 +23,7 @@ class App extends Component {
 
   state = {
     query: '',
-    games:[],
-    gameModalShown: false,
-    game_id: '',
-//    gamesObj:{}
+    games:[]
   }
 
   // Get list of top 10 games by default when app loads
@@ -81,26 +77,13 @@ class App extends Component {
     })
   }
 
+// Perform search if enter is pressed
   handleKeyPress  = event => {
     if (event.key === 'Enter') {
       this.getSearch()
     }
   }
 
-  showGameModal = game_id => {
-    this.setState({
-      gameModalShown: true,
-      game_id: game_id
-    })
-  }
-
-  hideGameModal = () => {
-    this.setState({
-      gameModalShown: false
-    })
-  }
-
-// TODO: Modals aren't showing
   render() {
     return (
       <div className='bg-twitch-light'>
@@ -114,12 +97,6 @@ class App extends Component {
         <main className='container'>
           <Games
             games={this.state.games}
-            showGameModal={this.showGameModal}
-            hideGameModal={this.hideGameModal}
-          />
-          <GameModal
-            gameModalShown={this.state.gameModalShown}
-            hideGameModal={this.hideGameModal}
           />
         </main>
         <Footer

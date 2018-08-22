@@ -10,6 +10,9 @@ import Twitch_Purple from './assets/Twitch_Purple_RGB.svg'
 // API key in <project>/.env
 const API_KEY = process.env.REACT_APP_TWITCH_API_KEY
 
+// Uncomment to intentionally throw HTTP error
+// const API_KEY = ''
+
 // Format URL and header for Twitch v5 (kraken) API
 const API_URL = 'https://api.twitch.tv/kraken/'
 const API_HEAD = {
@@ -48,7 +51,7 @@ class App extends Component {
           this.getTopGames()
         }
       })
-      .catch(( error ) => {
+      .catch( error => {
         console.log('Error during search - ' + error)
       })
     } else {
@@ -66,7 +69,7 @@ class App extends Component {
         games: data.top.map(g => g.game)
       })
     })
-    .catch(( error ) => {
+    .catch( error => {
       console.log('Error getting top games - ' + error)
     })
   }
@@ -78,7 +81,7 @@ class App extends Component {
   }
 
 // Perform search if enter is pressed
-  handleKeyPress  = event => {
+  handleKeyPress = event => {
     if (event.key === 'Enter') {
       this.getSearch()
     }

@@ -112,3 +112,5 @@ class App extends Component {
 }
 
 export default App;
+
+// Added a comment here for no good reason
